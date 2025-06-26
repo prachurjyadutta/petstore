@@ -1,0 +1,2 @@
+# requirements.txt
+# Placeholder content for pet-store-app/backend/requirements.txt
