@@ -93,6 +93,16 @@ uvicorn app.main:app --reload
 
 - ReDoc: http://localhost:8000/redoc
 
+6. **Run using Docker**
+
+```bash
+# Build the image
+docker build -t petstore-backend .
+
+# Run the container
+docker run -p 8000:8000 petstore-backend
+
+```
 
 **API Modules**
 
