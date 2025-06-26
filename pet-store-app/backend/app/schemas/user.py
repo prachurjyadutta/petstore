@@ -1,8 +1,6 @@
-# app/schemas/user.py
-
 from pydantic import BaseModel, EmailStr
 from typing import Optional
-
+from uuid import UUID
 
 class UserBase(BaseModel):
     name: str
@@ -16,7 +14,7 @@ class UserCreate(UserBase):
 
 
 class User(UserBase):
-    id: int
+    id: UUID
     is_active: bool
     is_superuser: bool
 

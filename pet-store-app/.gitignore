@@ -4,3 +4,20 @@ venv/
 backend/app/env/
 
 backend/test.db
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+test.db
+
+# Node.js
+node_modules/
+dist/
+.env
+
+# VSCode (optional)
+.vscode/
+
+# Mac/Linux
+.DS_Store

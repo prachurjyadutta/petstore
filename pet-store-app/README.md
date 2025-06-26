@@ -119,6 +119,10 @@ docker run -p 8000:8000 petstore-backend
 
 ## To Do
 
+Add pet sitting services
+
+Add pet vaccination records
+
 Add JWT-based authentication
 
 Implement pagination and filters

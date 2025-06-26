@@ -1,2 +1,85 @@
-# index.html
-# Placeholder content for pet-store-app/frontend/index.html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Store App</title>
+
+    <!-- Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind support -->
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+  <body class="font-[Inter] bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <header class="bg-indigo-600 text-white p-6 shadow-md">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">🐾 Pet Store</h1>
+        <nav class="space-x-6">
+          <a href="#" class="hover:underline">Home</a>
+          <a href="#services" class="hover:underline">Services</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-4">
+      <section class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Welcome to Pet Store</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Everything your furry friend needs – health, grooming, and happiness under one digital roof.
+        </p>
+      </section>
+
+      <section id="services" class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">🩺 Vet Appointments</h3>
+          <p>Book and manage vet visits with licensed professionals directly through the app.</p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">📋 Medical Records</h3>
+          <p>Securely store, access, and share your pet’s health history anytime, anywhere.</p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">🐶 Pet Mating Services</h3>
+          <p>Connect pets with compatible mates in a safe, supervised manner.</p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">💊 Medication Tracking</h3>
+          <p>Never miss a dose again – schedule and log your pet’s medication easily.</p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">📦 Inventory & Billing</h3>
+          <p>Manage pet supplies, generate bills, and keep things organized with ease.</p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+          <h3 class="text-xl font-semibold mb-2">👤 User Accounts</h3>
+          <p>Custom profiles for pet parents, vets, and admins to streamline interaction.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-indigo-700 text-white text-center p-6 mt-12">
+      <p>📍 Pet Store HQ, 123 Bark Avenue, Petville</p>
+      <p>📧 support@petstore.com | ☎️ (123) 456-7890</p>
+      <p class="mt-2">&copy; 2025 Pet Store App. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
