@@ -1,2 +1,6 @@
-# .gitignore
-# Placeholder content for pet-store-app/.gitignore
+# Python virtual environments
+env/
+venv/
+backend/app/env/
+
+backend/test.db

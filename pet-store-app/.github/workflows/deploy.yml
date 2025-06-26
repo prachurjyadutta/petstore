@@ -1,0 +1,14 @@
+# .github/workflows/deploy.yml
+name: Deploy to Render
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render deploy
+        run: |
+          curl -X POST https://api.render.com/deploy/srv-xxxxxxxxxx?key=YOUR_DEPLOY_HOOK_KEY
