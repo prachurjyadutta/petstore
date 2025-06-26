@@ -42,7 +42,7 @@ origins = [
     "http://localhost",
     "http://127.0.0.1:3000",
 ]
-
+    
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -52,7 +52,7 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(auth.router)
+app.include_router(auth.router, prefix="/api/v1", tags=["Auth"])
 app.include_router(users.router, prefix="/api/v1", tags=["Users"])
 app.include_router(pets.router, prefix="/api/v1", tags=["Pets"])
 app.include_router(adoptions.router)

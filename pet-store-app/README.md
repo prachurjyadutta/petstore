@@ -123,6 +123,10 @@ Add pet sitting services
 
 Add pet vaccination records
 
+Add pet photo
+
+Add delete requests for adoptions and mating
+
 Add JWT-based authentication
 
 Implement pagination and filters
