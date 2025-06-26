@@ -33,23 +33,6 @@ This is a backend API for managing a comprehensive Pet Store Management System. 
 
 ---
 
-## 📁 Project Structure
-
-pet-store-app/
-├── backend/
-│ ├── app/
-│ │ ├── api/
-│ │ │ └── v1/ # Routers per feature
-│ │ ├── crud/ # DB operations
-│ │ ├── db/
-│ │ │ ├── models/ # SQLAlchemy models
-│ │ │ ├── session.py # DB session manager
-│ │ ├── schemas/ # Pydantic schemas
-│ │ ├── main.py # FastAPI app entry
-│ └── env/ # Virtual environment
-
----
-
 ## 🧪 Requirements
 
 - Python 3.13+
@@ -104,7 +87,7 @@ docker run -p 8000:8000 petstore-backend
 
 ```
 
-**API Modules**
+## API Modules
 
 ```/users``` – Manage users
 
@@ -132,7 +115,9 @@ docker run -p 8000:8000 petstore-backend
 
 ```/reports``` – Business insights and reports
 
-**To Do**
+---
+
+## To Do
 
 Add JWT-based authentication
 
@@ -144,10 +129,16 @@ Role-based access control (admin, vet, user)
 
 Email notifications (e.g. appointment confirmation)
 
-**License**
+---
+
+## License
 
 This project is licensed under the MIT License. Feel free to use and modify.
 
-**Contributions**
+---
+
+## Contributions
 
 Feel free to fork this repo and contribute via Pull Requests. Open issues for any bugs or feature requests.
+
+---
