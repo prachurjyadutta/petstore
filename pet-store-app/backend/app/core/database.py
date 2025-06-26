@@ -1,2 +1,11 @@
-# database.py
-# Placeholder content for pet-store-app/backend/app/core/database.py
+# app/core/database.py
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+DATABASE_URL = "sqlite:///./test.db"  # Relative path to project root
+
+engine = create_engine(
+    DATABASE_URL, connect_args={"check_same_thread": False}
+)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

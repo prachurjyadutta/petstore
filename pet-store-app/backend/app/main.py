@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.db.init_db import init_db
+
 
 from app.api.v1.routes import (
     auth,
@@ -28,7 +30,15 @@ from app.db.base_class import Base
 # Create all tables
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(
+    title="Pet Store API",
+    description="API for managing pet store operations.",
+    version="1.0.0"
+)
+
+@app.on_event("startup")
+def on_startup():
+    init_db()
 
 origins = [
     "http://localhost:3000",
@@ -46,7 +56,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(auth.router)
-app.include_router(users.router)
+app.include_router(users.router, prefix="/api/v1/users", tags=["Users"])
 app.include_router(pets.router)
 app.include_router(adoptions.router)
 app.include_router(reviews.router)
