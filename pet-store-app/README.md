@@ -150,3 +150,81 @@ This project is licensed under the MIT License. Feel free to use and modify.
 Feel free to fork this repo and contribute via Pull Requests. Open issues for any bugs or feature requests.
 
 ---
+
+---
+
+## 🖥️ Frontend Setup
+
+The frontend for this application is located in the `frontend/` directory and is built using [React](https://reactjs.org/).
+
+### 🚧 Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+---
+
+### ▶️ Run the Frontend
+
+1. **Navigate to the frontend directory:**
+
+```bash
+cd ../frontend
+```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+---
+
+3. **Start the development server:**
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+---
+
+4. **Access the frontend app:**
+
+- http://localhost:3000
+
+## 🛠️ Frontend Environment Variables
+
+Create a .env file in the frontend root and set the base URL for the backend API:
+
+```
+VITE_API_BASE_URL=http://localhost:8000
+```
+
+Replace VITE_ with NEXT_PUBLIC_ or VUE_APP_ if you're using Next.js or Vue.
+
+---
+
+## 🧰 Useful Scripts
+
+| Command           | Description                |
+| ----------------- | -------------------------- |
+| `npm run dev`     | Start development server   |
+| `npm run build`   | Create production build    |
+| `npm run preview` | Preview production build   |
+| `npm run lint`    | Run linter (if configured) |
+
+---
+
+## ✅ Combined Start (Backend + Frontend)
+
+```bash
+# In separate terminals:
+uvicorn app.main:app --reload         # Backend
+npm run dev                           # Frontend
+```
+
+Alternatively, consider using concurrently or Docker Compose for unified startup.
